@@ -1,0 +1,212 @@
+{% extends ('::base.html.twig') %}
+
+{% block head %}
+ 	<link href="{{ asset('css/vendor/bootstrap.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/font-awesome.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/picto.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/material-design-iconic-font.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/datepicker3.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/jquery.minicolors.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/railscasts.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/owl.carousel.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/slick.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/daterangepicker-bs3.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/jquery.bootstrap-touchspin.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/select2.css')}}" rel="stylesheet">
+ 	<link href="{{ asset('css/vendor/jquery.countdown.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/app.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/main.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/essentials.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/material.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/layout.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/layout.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/sidebar.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/sidebar-skins.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/navbar.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/messages.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/media.css')}}" rel="stylesheet">
+
+  {# <link href="{{ asset('css/app/charts.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/maps.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/colors-alerts.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/colors-background.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/colors-buttons.css')}}" rel="stylesheet">
+  <link href="{{ asset('css/app/colors-text.css')}}" rel="stylesheet"> #}
+{% endblock head %}
+
+{% block body %}
+	<!-- Fixed navbar -->
+  {% block navbar %}
+  <div class="navbar navbar-default navbar-fixed-top navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand navbar-brand-logo">
+          <a class="svg" href="index.html">
+            Logo
+          </a>
+        </div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-nav-margin-left">
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="index.html">Home page</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="tutors.html">Tutors</a></li>
+              <li><a href="survey.html">Survey</a></li>
+              <li><a href="website-forum.html">Forum Home</a></li>
+              <li><a href="website-forum-category.html">Forum Category</a></li>
+              <li><a href="website-forum-thread.html">Forum Thread</a></li>
+              <li><a href="website-blog.html">Blog Listing</a></li>
+              <li><a href="website-blog-post.html">Blog Post</a></li>
+              <li><a href="website-contact.html">Contact</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="website-directory-grid.html">Grid Directory</a></li>
+              <li><a href="website-directory-list.html">List Directory</a></li>
+              <li><a href="website-course.html">Single Course</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="website-student-dashboard.html">Dashboard</a></li>
+              <li><a href="website-student-courses.html">My Courses</a></li>
+              <li><a href="website-take-course.html">Take Course</a></li>
+              <li><a href="website-course-forums.html">Course Forums</a></li>
+              <li><a href="website-take-quiz.html">Take Quiz</a></li>
+              <li><a href="website-student-messages.html">Messages</a></li>
+              <li><a href="website-student-profile.html">Private Profile</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Instructor <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="website-instructor-dashboard.html">Dashboard</a></li>
+              <li><a href="website-instructor-courses.html">My Courses</a></li>
+              <li><a href="website-instructor-course-edit-course.html">Edit Course</a></li>
+              <li><a href="website-instructor-earnings.html">Earnings</a></li>
+              <li><a href="website-instructor-statement.html">Statement</a></li>
+              <li><a href="website-instructor-messages.html">Messages</a></li>
+              <li><a href="website-instructor-profile.html">Private Profile</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">UI <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="essential-buttons.html">Buttons</a></li>
+              <li><a href="essential-icons.html">Icons</a></li>
+              <li><a href="essential-progress.html">Progress</a></li>
+              <li><a href="essential-grid.html">Grid</a></li>
+              <li><a href="essential-forms.html">Forms</a></li>
+              <li><a href="essential-tables.html">Tables</a></li>
+              <li><a href="essential-tabs.html">Tabs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="navbar-right">
+          <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
+            <!-- user -->
+            <li class="dropdown user">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="{{asset('images/people/110/guy-6.jpg')}}" alt="" class="img-circle" /> Bill<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="website-student-dashboard.html"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+                <li><a href="website-student-courses.html"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+                <li><a href="website-student-profile.html"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+              </ul>
+            </li>
+            <!-- // END user -->
+          </ul>
+          <a href="login.html" class="navbar-btn btn btn-primary">Log In</a>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </div>
+  {% endblock navbar %}
+
+  {% block content %}
+  
+
+  {% endblock content  %}
+
+  <!-- Footer -->
+  {% block footer %}
+    <footer class="footer">
+      <strong>Learning</strong> v1.1.0 &copy; Copyright 2015
+    </footer>
+  {% endblock footer %}
+  <!-- // Footer -->
+
+  <!-- Inline Script for colors and config objects; used by various external scripts; -->
+  <script>
+    var colors = {
+      "danger-color": "#e74c3c",
+      "success-color": "#81b53e",
+      "warning-color": "#f0ad4e",
+      "inverse-color": "#2c3e50",
+      "info-color": "#2d7cb5",
+      "default-color": "#6e7882",
+      "default-light-color": "#cfd9db",
+      "purple-color": "#9D8AC7",
+      "mustard-color": "#d4d171",
+      "lightred-color": "#e15258",
+      "body-bg": "#f6f6f6"
+    };
+    var config = {
+      theme: "html",
+      skins: {
+        "default": {
+          "primary-color": "#42a5f5"
+        }
+      }
+    };
+  </script>
+  <script src="{{ asset('/js/vendor/core/jquery.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/bootstrap.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/breakpoints.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.nicescroll.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/isotope.pkgd.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/packery-mode.pkgd.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.grid-a-licious.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.cookie.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery-ui.custom.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.hotkeys.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/handlebars.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.hotkeys.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/load_image.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/jquery.debouncedresize.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/modernizr.js')}}"></script>
+  <script src="{{ asset('js/vendor/core/velocity.js')}}"></script>
+  <script src="{{ asset('js/vendor/tables/all.js')}}"></script>
+  <script src="{{ asset('js/vendor/forms/all.js')}}"></script>
+  <script src="{{ asset('js/vendor/media/slick.js')}}"></script>
+  <script src="{{ asset('js/vendor/charts/flot/all.js')}}"></script>
+  <script src="{{ asset('js/vendor/nestable/jquery.nestable.js')}}"></script>
+  <script src="{{ asset('js/vendor/countdown/all.js')}}"></script>
+  <script src="{{ asset('js/app/app.js')}}"></script>
+
+  <!-- <script src="{{ asset('js/app/essentials/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/material/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/layout/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/sidebar/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/media/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/messages/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/maps/all.js')}}"></script> !-->
+  <!-- <script src="{{ asset('js/app/maps/charts.js')}}"></script> !-->
+{% endblock %}

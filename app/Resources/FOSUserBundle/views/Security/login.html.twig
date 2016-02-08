@@ -1,0 +1,50 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block body_class %}login{% endblock body_class %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+  {% if error %}
+      <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+  {% endif %}
+
+  <div id="content">
+    <div class="container-fluid">
+      <div class="lock-container">
+        <div class="panel panel-default text-center paper-shadow" data-z="0.5">
+          <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
+          <img src="{{asset('images/people/110/guy-5.jpg')}}" class="img-circle width-80">
+          <div class="panel-body">
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+              <div class="form-group">
+                <div class="form-control-material">
+                  <input class="form-control" id="username" placeholder="Username" type="text" name="_username" value="{{ last_username }}" required="required" />
+                  <label for="username">{{ 'security.login.username'|trans }}</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-control-material">
+                  <input class="form-control" id="password" name="_password" type="password" placeholder="Enter Password">
+                  <label for="password">{{ 'security.login.password'|trans }}</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+              	Login 
+              	<i class="fa fa-fw fa-unlock-alt"></i>
+              </button>
+              <a href="#" class="forgot-password">Forgot password?</a>
+              <a href="sign-up.html" class="link-text-color">Create account</a>
+              <input type="hidden" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{# <form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+</form> #}
+{% endblock fos_user_content %}
